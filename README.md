@@ -22,7 +22,7 @@ CREATE TABLE Veterinarian (Veterinarian_id INTEGER PRIMARY KEY, firstname VARCHA
 CREATE TABLE Clinic (Clinic_id INTEGER PRIMARY KEY, clinic_name VARCHAR(50));
 ```
 
-
+```cs
 -- Daniels anteckningar --
 
 select * from ownerperson;
@@ -52,5 +52,5 @@ SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
 
 EXEC sp_help 'dbo.dog';
-
+```
 --------------------
