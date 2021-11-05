@@ -1,7 +1,7 @@
 # SQL-Tables
 Sql Kod Databas
                 
-                
+  CREATE TABLE DOG (DOG_ID INTEGER PRIMARY KEY, DOGNAME VALCHAR(50));              
                                          
 ```sql
                                               ###Breeder
