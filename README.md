@@ -1,4 +1,6 @@
 # SQL-Tables
+```sql
+
 CREATE TABLE Veterinary_examination(Id INTEGER PRIMARY KEY, examination_date DATE, clinic_id INTEGER, dog_id INTEGER, result VARCHAR(20));
 
 Sql Kod Databas
@@ -9,26 +11,26 @@ update Dog set Race = 'schäfer' where dog_id = 1
                 
   CREATE TABLE DOG (DOG_ID INTEGER PRIMARY KEY, DOGNAME VALCHAR(50));              
                                          
-```sql
+
                                               ###Breeder
 CREATE TABLE breeder (id INTEGER PRIMARY KEY, firstname VARCHAR(50), lastname VARCHAR(50));
 CREATE TABLE Veterinarian (id INTEGER PRIMARY KEY, firstname VARCHAR(50), lastname VARCHAR(50));
 CREATE TABLE Clinic (id INTEGER PRIMARY KEY, clinic_name VARCHAR(50));
-```
+
 -------------------------------------------------------------------------------------------------
 
                                          
-```sql 
+
                                              ###Veterinarian
 CREATE TABLE Veterinarian (Veterinarian_id INTEGER PRIMARY KEY, firstname VARCHAR(50), lastname VARCHAR(50));
-```
+
                                         
-```sql
+
                                             ###Clinic
 CREATE TABLE Clinic (Clinic_id INTEGER PRIMARY KEY, clinic_name VARCHAR(50));
-```
 
-```cs
+
+
 -- Daniels anteckningar --
 
 select * from ownerperson;
@@ -58,7 +60,7 @@ SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
 
 EXEC sp_help 'dbo.dog';
-```
+
 --------------------
 
 SELECT Dog.Dog_ID, OwnerPerson.Owner_ID
@@ -77,3 +79,6 @@ ADD Father VARCHAR(20);
 
 ALTER TABLE Dog
 ADD Gender VARCHAR(20);
+
+
+```
