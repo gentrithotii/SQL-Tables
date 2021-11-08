@@ -54,3 +54,20 @@ WHERE CustomerID = 1;
 EXEC sp_help 'dbo.dog';
 ```
 --------------------
+
+SELECT Dog.Dog_ID, OwnerPerson.Owner_ID
+FROM Dog
+INNER JOIN OwnerPerson
+ON Dog.Owner_ID = OwnerPerson.Owner_ID;
+
+UPDATE Dog
+SET Race = 'Terrier'
+WHERE Dog_ID = 1;
+
+ALTER TABLE Dog
+ADD Mother VARCHAR(20);
+ALTER TABLE Dog
+ADD Father VARCHAR(20);
+
+ALTER TABLE Dog
+ADD Gender VARCHAR(20);
