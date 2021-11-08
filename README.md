@@ -1,4 +1,6 @@
 # SQL-Tables
+CREATE TABLE Veterinary_examination(Id INTEGER PRIMARY KEY, examination_date INTEGER, clinic_id INTEGER, dog_id INTEGER);
+
 Sql Kod Databas
 select * from dog
 inner join OwnerPerson
