@@ -1,5 +1,5 @@
 # SQL-Tables
-CREATE TABLE Veterinary_examination(Id INTEGER PRIMARY KEY, examination_date INTEGER, clinic_id INTEGER, dog_id INTEGER);
+CREATE TABLE Veterinary_examination(Id INTEGER PRIMARY KEY, examination_date DATE, clinic_id INTEGER, dog_id INTEGER, result VARCHAR(20));
 
 Sql Kod Databas
 select * from dog
