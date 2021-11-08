@@ -1,5 +1,9 @@
 # SQL-Tables
 Sql Kod Databas
+select * from dog
+inner join OwnerPerson
+on dog.owner_id = OwnerPerson.Owner_Id
+update Dog set Race = 'schäfer' where dog_id = 1
                 
   CREATE TABLE DOG (DOG_ID INTEGER PRIMARY KEY, DOGNAME VALCHAR(50));              
                                          
