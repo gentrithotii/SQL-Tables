@@ -72,9 +72,10 @@ CREATE OR ALTER PROCEDURE Dog_GetOwner
 AS
 BEGIN
 
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Fliken Ägare
+	select firstname, lastname, Adress, Telefonnummer, dogname from OwnerPerson
+    inner join Dog 
+    on dog.OwnerID = OwnerPerson.OwnerID
+    where DogID = @dogid
 	RETURN 
 
 END
