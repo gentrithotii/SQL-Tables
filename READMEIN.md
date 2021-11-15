@@ -146,11 +146,30 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE Owner_Add 
-	-- parametrar?
+    @ownerID int,
+    @FirstName varchar(40),
+    @LastName varchar(40),
+    @Telefonnummer varchar(20),
+    @Adress varchar(50)
 AS
 BEGIN
 
-	-- Implementera
+    insert into OwnerPerson
+    (
+    OwnerID,
+    FirstName,
+    LastName,
+    Telefonnummer,
+    Adress
+    )
+    values
+    (
+    @ownerID,
+    @FirstName,
+    @LastName,
+    @Telefonnummer,
+    @Adress
+    )
 	RETURN 
 
 END
