@@ -98,9 +98,10 @@ CREATE OR ALTER PROCEDURE Dog_GetBreeder
 AS
 BEGIN
 
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Fliken Uppfödare
+	select BreederName, Place
+	from Breeder inner join Litter on Litter.BreederID = Breeder.BreederID 
+	inner join Dog on Dog.LitterID = Litter.LitterID
+	where Dog.DogID = @DogId
 	RETURN 
 
 END
