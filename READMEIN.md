@@ -259,3 +259,19 @@ GO
 
 ```
 
+Reflektioner av grupp Svart(Är vi ute och cyklar?
+
+1. Vi har lärt oss hur vi skapar och hur index används.
+
+2. Vi har lärt oss hur vi använder stored procedures.
+
+3. Vi har fått repetera mycket av det som vi redan lärt oss tex inner join, ändra i tables, skapa tabeller och ER-diagram.
+
+4. En reflektion är hur viktigt det är att alla förstår och löser problemen ihop.
+
+Vad kunde vi gjort annorlunda?
+
+En funktion som vi inte är helt nöjda med är att en icke bortsprungen hund kan bli upphittad i vår tabell.
+
+Vi hade också kunnat göra tabellerna betydligt större men vi hade de nedbantade för att få en bra och enkel översikt.
+
