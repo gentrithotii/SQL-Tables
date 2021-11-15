@@ -85,10 +85,11 @@ CREATE OR ALTER PROCEDURE Dog_GetJournal
 	@DogId int
 AS
 BEGIN
-
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Fliken Vetrinär
+select examinationDate, Result, dogname, clinicname
+    from ((dog
+    inner join Veterinaryexamination on dog.dogid= Veterinaryexamination.dogid)
+    inner join clinic on dog.clinicid = clinic.ClinicID)
+    where dog.DogID = @DogId
 	RETURN 
 
 END
