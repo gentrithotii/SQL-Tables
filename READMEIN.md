@@ -229,22 +229,29 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE Dog_ReportMissing
-	-- parametrar?
+	  @dogid INT
 AS
 BEGIN
 
-	-- Implementera
+	UPDATE DOG
+    SET
+    StatusId = 2
+    WHERE dogid = @Dogid
+
 	RETURN 
 
 END
 GO
 
 CREATE OR ALTER PROCEDURE Dog_ReportFound
-	-- parametrar?
+	 @dogid INT
 AS
 BEGIN
 
-	-- Implementera
+	UPDATE DOG
+    SET
+    StatusId = 1
+    WHERE dogid = @Dogid
 	RETURN 
 
 END
