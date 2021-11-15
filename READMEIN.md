@@ -126,9 +126,8 @@ CREATE OR ALTER PROCEDURE Dog_GetOffspring
 AS
 BEGIN
 
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Fliken avkommor
+	select DogName from Dog inner join Litter on Dog.LitterID = Litter.LitterID
+where LitterMom = @DogId or LitterDad = @DogId
 	RETURN 
 
 END
