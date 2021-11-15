@@ -9,8 +9,9 @@ CREATE OR ALTER PROCEDURE Statistics_Get
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/
+	Select count (dogid) as 'Antal hundar'
+	from dog
+	
 	RETURN 
 
 END
@@ -32,8 +33,7 @@ CREATE OR ALTER PROCEDURE Breed_GetAll
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/Hund_sok.aspx
+	select distinct racename from Race
 	RETURN 
 
 END
