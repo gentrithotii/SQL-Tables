@@ -9,8 +9,8 @@ CREATE OR ALTER PROCEDURE Statistics_Get
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/
+	Select count (dogid) as 'Antal hundar'
+	from dog
 	RETURN 
 
 END
