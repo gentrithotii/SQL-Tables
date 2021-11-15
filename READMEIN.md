@@ -135,11 +135,39 @@ GO
 -- Övriga funktioner
 
 CREATE OR ALTER PROCEDURE Dog_Add 
-	-- parametrar?
+       @dogid int,
+       @DogName VARCHAR(50),
+       @OwnerID INT,
+       @ChipID VARCHAR(20),
+       @LitterID INT NULL,
+       @RaceID INT,
+       @GenderID INT,
+       @ClinicID INT null
 AS
 BEGIN
-
-	-- Implementera
+	INSERT INTO Dog
+          ( 
+            DogID,
+            DogName,
+            OwnerID,                 
+            ChipID,
+            LitterID,
+            RaceID,
+            GenderID,
+            ClinicID
+          ) 
+     VALUES 
+          ( 
+            @dogid,
+            @DogName,
+            @OwnerID,
+            @ChipID,
+            @LitterID,
+            @RaceID,
+            @GenderID,
+            @ClinicID
+          ) 
+	
 	RETURN 
 
 END
@@ -176,11 +204,17 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE Dog_ChangeOwner
-	-- parametrar?
+        @dogID int,
+        @dogname varchar(30),
+        @ownerID int
+
 AS
 BEGIN
 
-	-- Implementera
+	UPDATE Dog
+        set ownerid = @ownerid
+        where dogname = @dogname and
+        dogid = @dogid
 	RETURN 
 
 END
@@ -210,18 +244,3 @@ GO
 
 ```
 
-Reflektioner av grupp Svart(Är vi ute och cyklar?
-
-1. Vi har lärt oss hur vi skapar och hur index används.
-
-2. Vi har lärt oss hur vi använder stored procedures.
-
-3. Vi har fått repetera mycket av det som vi redan lärt oss tex inner join, ändra i tables, skapa tabeller och ER-diagram.
-
-4. En reflektion är hur viktigt det är att alla förstår och löser problemen ihop.
-
-Vad kunde vi gjort annorlunda?
-
-En funktion som vi inte är helt nöjda med är att en icke bortsprungen hund kan bli upphittad i vår tabell.
-
-Vi hade också kunnat göra tabellerna betydligt större men vi hade de nedbantade för att få en bra och enkel översikt.
