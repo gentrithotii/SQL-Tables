@@ -34,8 +34,7 @@ CREATE OR ALTER PROCEDURE Breed_GetAll
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/Hund_sok.aspx
+	select distinct race_name from race
 	RETURN 
 
 END
