@@ -113,9 +113,9 @@ CREATE OR ALTER PROCEDURE Dog_GetLittermates
 AS
 BEGIN
 
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Fliken Kullsyskon
+	select DogName, NameOfLitter
+from Dog full join Litter on Dog.LitterID = Litter.LitterID
+where Dog.LitterID = @DogId
 	RETURN 
 
 END
