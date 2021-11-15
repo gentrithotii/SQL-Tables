@@ -9,9 +9,8 @@ CREATE OR ALTER PROCEDURE Statistics_Get
 AS
 BEGIN
 
-	Select count (dogid) as 'Antal hundar'
-	from dog
-	
+	-- Implementera
+	-- hundar.skk.se/hunddata/
 	RETURN 
 
 END
@@ -19,11 +18,13 @@ GO
 
 
 CREATE OR ALTER PROCEDURE Gender_GetAll
+@Gender varchar(10)
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/Hund_sok.aspx
+Select dogname from dog inner join Gender on dog.GenderID = gender.GenderID
+where sex = @Gender
+
 	RETURN 
 
 END
@@ -33,7 +34,8 @@ CREATE OR ALTER PROCEDURE Breed_GetAll
 AS
 BEGIN
 
-	select distinct racename from Race
+	-- Implementera
+	-- hundar.skk.se/hunddata/Hund_sok.aspx
 	RETURN 
 
 END
