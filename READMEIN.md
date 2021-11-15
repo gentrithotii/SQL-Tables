@@ -41,14 +41,14 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE Dog_Find 
-	@Regno varchar(50), 
-	@Name varchar(50) 
+    @name varchar(50),
+    @chipid varchar(50)
 	-- osv
 AS
 BEGIN
 
-	-- Implementera
-	-- hundar.skk.se/hunddata/Hund_sok.aspx
+    select dogname, ChipID from Dog
+    where dogname like  @Name OR ChipID like  @chipid
 	RETURN 
 
 END
