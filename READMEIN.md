@@ -59,9 +59,13 @@ CREATE OR ALTER PROCEDURE Dog_GetInfo
 AS
 BEGIN
 
-	-- Implementera
-	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
-	-- Den "grå informationen"
+    select DogName, ChipID, firstname, lastname, racename, sex
+    from
+    ((Dog Inner join OwnerPerson on dog.ownerid = ownerperson.ownerid)
+    inner join race on dog.raceid = race.raceid
+    inner join gender on dog.genderid = gender.genderid)
+    where DogID = @Dogid
+    
 	RETURN 
 
 END
@@ -85,11 +89,10 @@ CREATE OR ALTER PROCEDURE Dog_GetJournal
 	@DogId int
 AS
 BEGIN
-select examinationDate, Result, dogname, clinicname
-    from ((dog
-    inner join Veterinaryexamination on dog.dogid= Veterinaryexamination.dogid)
-    inner join clinic on dog.clinicid = clinic.ClinicID)
-    where dog.DogID = @DogId
+
+	-- Implementera
+	-- https://hundar.skk.se/hunddata/Hund.aspx?hundid=2201379
+	-- Fliken Vetrinär
 	RETURN 
 
 END
